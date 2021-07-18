@@ -17,4 +17,10 @@
     android:label="fragment_ingredients"
     tools:layout="@layout/fragment_ingredient" />
 
+  <fragment
+    android:id="@+id/ingredientsPagerFragment"
+    android:name="com.code.challenge.features.fragments.IngredientsPagerFragment"
+    android:label="fragment_ingredients_pager"
+    tools:layout="@layout/fragment_ingredients_pager" />
+
 </navigation>

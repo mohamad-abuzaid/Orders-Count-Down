@@ -141,7 +141,7 @@ class OrdersFragment : BaseFragmentViewBinding<FragmentOrdersBinding>(), OrdersC
 
             onOrderProgressUpdated(workerOrderId, workerProgress, workerMaxProgress)
 
-//            if (alerted) playRingtone()
+            if (alerted) playRingtone()
             if (completed) onOrderExpired(workerOrderId)
           }
         })

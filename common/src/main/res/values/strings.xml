@@ -7,6 +7,7 @@
   <string name="expired">Expired</string>
   <string name="orders">Orders</string>
   <string name="ingredients">Ingredients</string>
+  <string name="available">Available</string>
 
   <string name="select_currency">Select currency</string>
   <string name="currency">Currency</string>
@@ -19,4 +20,5 @@
   <string name="enter_amount">Please, enter amount!</string>
   <string name="server_error_message">Request failed, try again</string>
   <string name="no_orders">No orders available</string>
+  <string name="no_ingredients">No ingredients available</string>
 </resources>

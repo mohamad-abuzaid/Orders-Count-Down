@@ -14,11 +14,60 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginEnd="@dimen/_15sdp"
-    android:layout_marginBottom="@dimen/_15sdp"
     android:text="@string/ingredients"
     android:textAppearance="@style/lato_23_bold"
     android:textColor="@color/black"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent" />
+
+  <EditText
+    android:id="@+id/et_ing_search"
+    android:layout_width="0dp"
+    android:layout_height="@dimen/_35sdp"
+    android:layout_marginTop="@dimen/_15sdp"
+    android:layout_marginEnd="@dimen/_15sdp"
+    android:imeOptions="actionGo"
+    android:inputType="numberDecimal"
+    android:textAppearance="@style/lato_16_regular"
+    android:textColor="@color/black"
+    app:layout_constraintEnd_toStartOf="@id/btn_ing_search"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/tv_ing_title" />
+
+  <com.google.android.material.button.MaterialButton
+    android:id="@+id/btn_ing_search"
+    style="@style/Widget.MaterialComponents.Button.Default.Submit"
+    android:layout_width="@dimen/_50sdp"
+    android:layout_height="@dimen/_35sdp"
+    android:layout_gravity="center_horizontal"
+    android:text="@string/go"
+    android:textAppearance="@style/lato_14_bold"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="@id/et_ing_search" />
+
+  <com.google.android.material.tabs.TabLayout
+    android:id="@+id/tab_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_10sdp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/et_ing_search"
+    app:tabIndicatorColor="@color/main_red"
+    app:tabMode="auto"
+    app:tabPaddingBottom="@dimen/_5sdp"
+    app:tabPaddingTop="@dimen/_5sdp"
+    app:tabSelectedTextColor="@color/main_red"
+    app:tabTextColor="@color/top_gray" />
+
+  <androidx.viewpager2.widget.ViewPager2
+    android:id="@+id/vp_ings_pager"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginTop="@dimen/_15sdp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/tab_layout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

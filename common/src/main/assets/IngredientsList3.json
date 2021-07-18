@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "data": [
+    {
+      "id": 1,
+      "category_id": 3,
+      "title": "Hindi Rice",
+      "quantity": 5,
+      "image": "image"
+    },
+    {
+      "id": 2,
+      "category_id": 3,
+      "title": "Hindi Sauce",
+      "quantity": 12,
+      "image": "image"
+    },
+    {
+      "id": 3,
+      "category_id": 3,
+      "title": "Pakistani Beans",
+      "quantity": 1,
+      "image": "image"
+    },
+    {
+      "id": 4,
+      "category_id": 3,
+      "title": "Mongolian Tea",
+      "quantity": 0,
+      "image": "image"
+    },
+    {
+      "id": 5,
+      "category_id": 3,
+      "title": "Fried Chicken",
+      "quantity": 22,
+      "image": "image"
+    }
+  ]
+}

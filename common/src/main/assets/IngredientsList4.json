@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "data": [
+    {
+      "id": 1,
+      "category_id": 4,
+      "title": "Russian Rice",
+      "quantity": 5,
+      "image": "image"
+    },
+    {
+      "id": 2,
+      "category_id": 4,
+      "title": "Ukrainian Meat",
+      "quantity": 12,
+      "image": "image"
+    },
+    {
+      "id": 3,
+      "category_id": 4,
+      "title": "German Steak",
+      "quantity": 1,
+      "image": "image"
+    },
+    {
+      "id": 4,
+      "category_id": 4,
+      "title": "French Toast",
+      "quantity": 0,
+      "image": "image"
+    },
+    {
+      "id": 5,
+      "category_id": 4,
+      "title": "Sudanese Steak",
+      "quantity": 22,
+      "image": "image"
+    }
+  ]
+}

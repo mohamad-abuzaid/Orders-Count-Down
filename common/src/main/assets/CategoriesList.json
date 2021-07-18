@@ -1,0 +1,25 @@
+{
+  "success": true,
+  "data": [
+    {
+      "id": 1,
+      "title": "Bento"
+    },
+    {
+      "id": 2,
+      "title": "Main"
+    },
+    {
+      "id": 3,
+      "title": "Appetizer"
+    },
+    {
+      "id": 4,
+      "title": "Side"
+    },
+    {
+      "id": 5,
+      "title": "Drinks"
+    }
+  ]
+}

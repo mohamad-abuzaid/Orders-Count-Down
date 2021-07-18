@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "data": [
+    {
+      "id": 1,
+      "category_id": 1,
+      "title": "American Rice",
+      "quantity": 5,
+      "image": "image"
+    },
+    {
+      "id": 2,
+      "category_id": 1,
+      "title": "Egypt Rice",
+      "quantity": 12,
+      "image": "image"
+    },
+    {
+      "id": 3,
+      "category_id": 1,
+      "title": "Mexican Rice",
+      "quantity": 1,
+      "image": "image"
+    },
+    {
+      "id": 4,
+      "category_id": 1,
+      "title": "Somali Rice",
+      "quantity": 0,
+      "image": "image"
+    },
+    {
+      "id": 5,
+      "category_id": 1,
+      "title": "Mali Rice",
+      "quantity": 22,
+      "image": "image"
+    }
+  ]
+}

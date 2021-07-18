@@ -8,6 +8,7 @@ import com.code.challenge.data.di.RepositoriesModule
 import com.code.challenge.di.workers.WorkManagerModule
 import com.code.challenge.features.ChallengeActivity
 import com.code.challenge.features.fragments.IngredientFragment
+import com.code.challenge.features.fragments.IngredientsPagerFragment
 import com.code.challenge.features.fragments.OrdersFragment
 import dagger.Component
 import okhttp3.OkHttpClient
@@ -35,4 +36,6 @@ interface AppComponent {
   fun inject(target: OrdersFragment)
 
   fun inject(target: IngredientFragment)
+
+  fun inject(target: IngredientsPagerFragment)
 }

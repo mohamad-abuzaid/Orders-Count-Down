@@ -21,15 +21,13 @@
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent" />
 
-  <com.google.android.material.button.MaterialButton
+  <ImageView
     android:id="@+id/btn_ingredients"
-    style="@style/Widget.MaterialComponents.Button.Default.Submit"
-    android:layout_width="@dimen/_90sdp"
-    android:layout_height="@dimen/_35sdp"
+    android:layout_width="@dimen/_30sdp"
+    android:layout_height="@dimen/_30sdp"
     android:layout_gravity="center_horizontal"
     android:layout_marginBottom="@dimen/_15sdp"
-    android:backgroundTint="@color/main_blue"
-    android:text="@string/ingredients"
+    android:src="@drawable/ic_svg_ings"
     android:textAppearance="@style/lato_16_bold"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toTopOf="parent" />
