@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.viewModels
+import androidx.fragment.app.activityViewModels
 import com.code.challenge.R
 import com.code.challenge.common.base.views.BaseFragmentViewBinding
 import com.code.challenge.common.di.ViewModelFactory
@@ -37,11 +37,10 @@ class IngredientsPagerFragment : BaseFragmentViewBinding<FragmentIngredientsPage
   @Inject
   lateinit var viewModelFactory: ViewModelFactory
 
-  private val ingredientsFragmentViewModel: IngredientsFragmentViewModel by viewModels { viewModelFactory }
+  private val ingredientsFragmentViewModel: IngredientsFragmentViewModel by activityViewModels { viewModelFactory }
 
-  private val profileFeedAdapter: IngredientsAdapter by lazy {
-    IngredientsAdapter()
-  }
+  private val profileFeedAdapter: IngredientsAdapter by lazy { IngredientsAdapter() }
+  private var categoryId: Long = 0L
 
   override fun onBind(inflater: LayoutInflater, container: ViewGroup?): FragmentIngredientsPagerBinding {
     appComponent.inject(this)
@@ -54,12 +53,14 @@ class IngredientsPagerFragment : BaseFragmentViewBinding<FragmentIngredientsPage
     initObservers()
 
     arguments?.getLong("category_id")?.let {
+      categoryId = it
       fetchInitialData(it)
     }
   }
 
   private fun initObservers() {
     ingredientsFragmentViewModel.ingredientsListResult.observe(viewLifecycleOwner, this::ingredientsListObserver)
+    ingredientsFragmentViewModel.searchTextLiveData.observe(viewLifecycleOwner, this::searchDataObserver)
   }
 
   private fun fetchInitialData(categoryId: Long) {
@@ -83,6 +84,14 @@ class IngredientsPagerFragment : BaseFragmentViewBinding<FragmentIngredientsPage
           getString(R.string.dismiss)
         ) {}
       }
+    }
+  }
+
+  private fun searchDataObserver(result: String) {
+    if (result.isNullOrEmpty()) {
+      fetchInitialData(categoryId)
+    } else {
+
     }
   }
 

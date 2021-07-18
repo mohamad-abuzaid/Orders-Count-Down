@@ -27,6 +27,9 @@ class IngredientsFragmentViewModel @Inject constructor(
   private val _ingredientsListResult = MutableLiveData<Resource<List<IngredientModel>>>()
   val ingredientsListResult: LiveData<Resource<List<IngredientModel>>> get() = _ingredientsListResult
 
+  private val _searchTextLiveData = MutableLiveData<String>()
+  val searchTextLiveData: LiveData<String> get() = _searchTextLiveData
+
   fun fetchCategoriesList() {
     add(
       fetchCategoriesUseCase()
@@ -59,5 +62,9 @@ class IngredientsFragmentViewModel @Inject constructor(
           }
         )
     )
+  }
+
+  fun updateSearchText(searchTxt: String) {
+    _searchTextLiveData.value = searchTxt
   }
 }

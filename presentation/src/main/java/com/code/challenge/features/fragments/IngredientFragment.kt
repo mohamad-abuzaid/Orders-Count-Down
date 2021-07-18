@@ -4,7 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.viewModels
+import androidx.core.widget.addTextChangedListener
+import androidx.fragment.app.activityViewModels
 import androidx.viewpager2.widget.ViewPager2
 import com.code.challenge.R
 import com.code.challenge.common.base.views.BaseFragmentViewBinding
@@ -28,7 +29,7 @@ class IngredientFragment : BaseFragmentViewBinding<FragmentIngredientBinding>() 
   @Inject
   lateinit var viewModelFactory: ViewModelFactory
 
-  private val ingredientsFragmentViewModel: IngredientsFragmentViewModel by viewModels { viewModelFactory }
+  private val ingredientsFragmentViewModel: IngredientsFragmentViewModel by activityViewModels { viewModelFactory }
 
   override fun onBind(
     inflater: LayoutInflater,
@@ -44,9 +45,16 @@ class IngredientFragment : BaseFragmentViewBinding<FragmentIngredientBinding>() 
   ) {
     super.onViewCreated(view, savedInstanceState)
 
+    initSearchWatcher()
     initObservers()
 
     fetchInitialData()
+  }
+
+  private fun initSearchWatcher() {
+    binding.etIngSearch.addTextChangedListener {
+      ingredientsFragmentViewModel.updateSearchText(it.toString())
+    }
   }
 
   private fun initObservers() {

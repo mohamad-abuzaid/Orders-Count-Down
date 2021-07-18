@@ -30,20 +30,9 @@
     android:inputType="numberDecimal"
     android:textAppearance="@style/lato_16_regular"
     android:textColor="@color/black"
-    app:layout_constraintEnd_toStartOf="@id/btn_ing_search"
+    app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@id/tv_ing_title" />
-
-  <com.google.android.material.button.MaterialButton
-    android:id="@+id/btn_ing_search"
-    style="@style/Widget.MaterialComponents.Button.Default.Submit"
-    android:layout_width="@dimen/_50sdp"
-    android:layout_height="@dimen/_35sdp"
-    android:layout_gravity="center_horizontal"
-    android:text="@string/go"
-    android:textAppearance="@style/lato_14_bold"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toTopOf="@id/et_ing_search" />
 
   <com.google.android.material.tabs.TabLayout
     android:id="@+id/tab_layout"
